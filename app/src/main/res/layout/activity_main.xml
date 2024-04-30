@@ -1,61 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/linear1"
+    android:id="@+id/relative1"
     android:padding="4dp"
     android:layout_margin="4dp"
     android:background="@drawable/milkyway"
     android:orientation="horizontal"
     tools:ignore="HardcodedText">
-    <LinearLayout
-        android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
-        android:padding="2dp" android:layout_margin="2dp" android:id="@+id/nested1">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello Universe"
-            android:padding="4dp"
-            android:layout_margin="4dp"
-            android:background="#A9A9A9"
-            android:textSize="20sp" />
 
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_margin="2dp" android:padding="2dp"
+    <TextView
+        android:id="@+id/helloUni" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="#A9A9A9" android:padding="4dp"
+        android:text="Hello Universe" android:textSize="20sp" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/tvname" android:layout_margin="2dp" android:padding="2dp" android:layout_below="@+id/helloUni"
             android:text="Galaxy Name:" android:textColor="#FFFFFF" android:textSize="16sp"
             />
-        <TextView
+    <TextView
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_margin="2dp" android:padding="2dp"
-            android:textSize="16sp" android:textColor="#FFFFFF"
+            android:layout_margin="2dp" android:padding="2dp" android:id="@+id/solarSys"
+            android:textSize="16sp" android:textColor="#FFFFFF" android:layout_below="@+id/tvname"
             android:text="Galaxy Solar Systems:" />
-        <TextView
+    <TextView
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_margin="2dp" android:padding="2dp"
+            android:layout_margin="2dp" android:padding="2dp" android:id="@+id/habitable" android:layout_below="@+id/solarSys"
             android:textColor="#FFFFFF" android:text="Galaxy Habitable Planets:" android:textSize="16sp" />
-        <TextView
+    <TextView
             android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_margin="2dp" android:padding="2dp"
+            android:layout_margin="2dp" android:padding="2dp" android:id="@+id/colonies" android:layout_below="@+id/habitable"
             android:text="Galaxy Colonies:" android:textColor="#FFFFFF" android:textSize="16sp" />
-        <TextView
-            android:layout_width="wrap_content" android:textColor="#FFFFFF"
-            android:layout_margin="2dp" android:padding="2dp"
-            android:layout_height="wrap_content" android:text="Galaxy Population:" android:textSize="16sp" />
 
-    </LinearLayout>
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_margin="2dp" android:padding="2dp" android:text="Galaxy Population:"
+        android:textColor="#FFFFFF" android:textSize="16sp" android:id="@+id/galaxyPop" android:layout_below="@id/colonies"/>
+
+    <TextView
+        android:id="@+id/milkyW"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:orientation="vertical" >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Milky Way"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/helloUni"
+        android:layout_alignBottom="@+id/tvname"
+        android:layout_marginLeft="202dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/tvname"
+        android:text="Milky Way"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
 
-
-
-</LinearLayout>
+</RelativeLayout>
